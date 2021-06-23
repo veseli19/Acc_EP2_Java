@@ -1,7 +1,7 @@
 public class LinkedList {
 
     private SLNode head;
-    private String str;
+    
 
     //Add an element at the end of the list. 
     public boolean add(int n){
@@ -33,11 +33,9 @@ public class LinkedList {
         String result = "";
 
         while(current != null){
-            if(current.getNext() != null){
-                result += current.getData() + "->";
-            }else{
-                result += current.getData();
-            }
+            
+            result += current.getData() + "->";
+            current = current.getNext();
         }
         return result;
     }
