@@ -1,6 +1,7 @@
 public class LinkedList {
 
     private SLNode head;
+    private String str;
 
     //Add an element at the end of the list. 
     public boolean add(int n){
