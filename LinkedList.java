@@ -30,14 +30,13 @@ public class LinkedList {
     public String toString(){
 
         SLNode current = head;
-        String result = "";
+        StringBuilder str = new StringBuilder();
 
         while(current != null){
-            
-            result += current.getData() + "->";
-            current = current.getNext();
+           str.append(current.getData()).append("->");
+           current = current.getNext();
         }
-        return result;
+        return str.toString();
     }
     
 }
