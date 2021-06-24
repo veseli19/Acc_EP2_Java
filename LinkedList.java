@@ -32,6 +32,10 @@ public class LinkedList {
         SLNode current = head;
         StringBuilder str = new StringBuilder();
 
+        if(head == null){
+            return "This list is empty";
+        }
+
         while(current != null){
            str.append(current.getData()).append("->");
            current = current.getNext();
@@ -66,5 +70,4 @@ class SLNode{
     public SLNode getNext(){
         return this.next;
     }
-
 }
