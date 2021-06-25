@@ -14,6 +14,11 @@ public class LinkedList {
 
     }
 
+    //returns data with index i
+    public int get(int i){
+
+        return head.get(i);
+    }
     public String toString(){
 
         SLNode current = head;
@@ -57,6 +62,16 @@ class SLNode{
         }
     }
 
+    //Get data
+    public int get(int i){
+
+        if(i == 0){
+            return this.data;
+        }else{
+            return next.get(i - 1);
+        }
+    }
+    
     public void setData(int data){
         this.data = data;
     }
