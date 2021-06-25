@@ -6,24 +6,11 @@ public class LinkedList {
     //Add an element at the end of the list. 
     public boolean add(int n){
         
-        SLNode newNode = new SLNode(n, null);
-        
         if(head == null){
-            head = newNode;
-            return true;
-        }else{
-
-            SLNode current = head;
-
-            while(current != null){
-                if(current.getData() == newNode.getData()){
-                    return false;
-                }
-                current = current.getNext();
-            }
-
+            head = new SLNode(n, null);
             return true;
         }
+        return head.add(n);
 
     }
 
@@ -55,6 +42,21 @@ class SLNode{
         this.next = next;
     }
 
+    //Add data to the node
+    public boolean add(int data){
+        
+        if(data == this.data){
+            return false;
+        }
+
+        if(next == null){
+            next = new SLNode(data, null);
+            return true;
+        }else{
+            return next.add(data);
+        }
+    }
+
     public void setData(int data){
         this.data = data;
     }
@@ -69,5 +71,5 @@ class SLNode{
 
     public SLNode getNext(){
         return this.next;
-    }
+    } 
 }
