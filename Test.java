@@ -1,4 +1,4 @@
-import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
+
 
 public class Test{
     public static void main(String[] args) {
@@ -18,5 +18,6 @@ public class Test{
         System.out.println(ls1.get(5));    //202 
         System.out.println(ls1.getElement(1000)); //1000
         System.out.println(ls1.getElement(1001)); //0
+        System.out.println(ls1.size());  //7
     }
 }

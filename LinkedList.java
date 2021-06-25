@@ -22,10 +22,14 @@ public class LinkedList {
 
     // Returns the data with the specified element or 0 if no such data exits in the list.
     public int getElement(int data){
-        
+
         return head.getElement(data);
     }
 
+    public int size(){
+
+        return head.size();
+    }
 
     public String toString(){
 
@@ -78,6 +82,14 @@ class SLNode{
         }else{
             return next.get(i - 1);
         }
+    }
+
+    public int size(){
+
+        if(next == null){
+            return 1;
+        }
+        return 1 + next.size();
     }
 
     // Returns the data with the specified element or 0 if no such data exits in the list.
