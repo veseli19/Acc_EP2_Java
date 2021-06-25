@@ -16,5 +16,7 @@ public class Test{
         System.out.println(ls1.toString());
         System.out.println(ls1.get(2));    //1
         System.out.println(ls1.get(5));    //202 
+        System.out.println(ls1.getElement(1000)); //1000
+        System.out.println(ls1.getElement(1001)); //0
     }
 }

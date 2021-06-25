@@ -19,6 +19,14 @@ public class LinkedList {
 
         return head.get(i);
     }
+
+    // Returns the data with the specified element or 0 if no such data exits in the list.
+    public int getElement(int data){
+        
+        return head.getElement(data);
+    }
+
+
     public String toString(){
 
         SLNode current = head;
@@ -71,7 +79,19 @@ class SLNode{
             return next.get(i - 1);
         }
     }
-    
+
+    // Returns the data with the specified element or 0 if no such data exits in the list.
+    public int getElement(int n){
+
+        if(this.data == n){
+            return this.data;
+        }
+        if(next == null){
+            return 0;
+        }
+        return next.getElement(n);
+    }
+
     public void setData(int data){
         this.data = data;
     }
