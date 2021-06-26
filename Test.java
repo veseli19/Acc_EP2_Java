@@ -29,6 +29,10 @@ public class Test{
         System.out.println(ls2.addFirst(25));
         System.out.println(ls2.addFirst(11));
         System.out.println(ls2.addFirst(7));
+        System.out.println(ls2.addAfter(909, 3));   //true
+        System.out.println(ls2.addAfter(19, 9));    //false
+        System.out.println(ls2.addAfter(19, 8));    //true
+        System.out.println(ls2.addAfter(0, 5));
         System.out.println(ls2.toString());
 
     }

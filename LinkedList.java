@@ -27,6 +27,32 @@ public class LinkedList {
         return true;
     }
 
+    //Add after specified index
+    public boolean addAfter(int data, int i){
+
+        SLNode newNode = new SLNode(data, null);
+        
+        SLNode current = head;
+        int counter = 0;
+
+        if(head == null || i > size() - 1 || i < 0){
+            return false;
+        }
+        if(i == size()){
+            getLast().setNext(newNode);
+            return true;
+        }
+
+        while(i != counter){
+            current = current.getNext();
+            counter++;
+        }
+        newNode.setNext(current.getNext());
+        current.setNext(newNode);
+        return true;
+
+    }
+
     //returns data with index i
     public int get(int i){
 
@@ -58,6 +84,16 @@ public class LinkedList {
            current = current.getNext();
         }
         return str.toString();
+    }
+
+    public SLNode getLast(){
+
+        SLNode current = head;
+
+        while(current != null){
+            current = current.getNext();
+        }
+        return current;
     }
     
 }
