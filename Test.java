@@ -4,6 +4,7 @@ public class Test{
     public static void main(String[] args) {
         
         LinkedList ls1 = new LinkedList();
+        LinkedList ls2 = new LinkedList();
 
         System.out.println(ls1.add(10));
         System.out.println(ls1.add(5));
@@ -19,5 +20,16 @@ public class Test{
         System.out.println(ls1.getElement(1000)); //1000
         System.out.println(ls1.getElement(1001)); //0
         System.out.println(ls1.size());  //7
+
+        System.out.println(ls2.addFirst(1));
+        System.out.println(ls2.addFirst(10));
+        System.out.println(ls2.addFirst(100));
+        System.out.println(ls2.addFirst(21));
+        System.out.println(ls2.addFirst(23));
+        System.out.println(ls2.addFirst(25));
+        System.out.println(ls2.addFirst(11));
+        System.out.println(ls2.addFirst(7));
+        System.out.println(ls2.toString());
+
     }
 }

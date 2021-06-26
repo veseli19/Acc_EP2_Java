@@ -2,7 +2,6 @@ public class LinkedList {
 
     private SLNode head;
     
-
     //Add an element at the end of the list. 
     public boolean add(int n){
         
@@ -12,6 +11,20 @@ public class LinkedList {
         }
         return head.add(n);
 
+    }
+    //Add a node at the beginning of the list
+    public boolean addFirst(int n){
+
+        SLNode newNode = new SLNode(n, null);
+        
+        if(head == null){
+            head = newNode;
+            return true;
+        }
+        
+        newNode.setNext(head);
+        head = newNode;
+        return true;
     }
 
     //returns data with index i
@@ -104,6 +117,7 @@ class SLNode{
         return next.getElement(n);
     }
 
+    /*GETTER AND SETTER */
     public void setData(int data){
         this.data = data;
     }
