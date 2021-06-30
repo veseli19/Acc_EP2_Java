@@ -88,6 +88,46 @@ public class LinkedList {
 
     } 
 
+    //delete a node with same data
+    public boolean remove(int data){
+
+        if(head.getData() == data){
+            
+            head.setNext(head.getNext());
+            
+            return true;
+        }
+
+        if(size() == 2 && head.getData() == data){
+            head = getLast();
+            return true;
+        }
+
+        if(getLast().getData() == data){
+            SLNode current = head;
+            while(current.getNext() != getLast()){
+                current = current.getNext();
+            }
+            
+            current.setNext(null);
+            return true;
+        }
+
+        SLNode current = head;
+        SLNode help = null;
+        while(current != null){
+            if(current.getData() == data){
+                help.setNext(current.getNext());
+                current = help;
+                return true;
+            }
+            help = current;
+            current = current.getNext();
+            
+        }
+        return false;
+    }
+
     //returns data with index i
     public int get(int i){
 
@@ -125,11 +165,13 @@ public class LinkedList {
 
         SLNode current = head;
 
-        while(current != null){
+        while(current.getNext() != null){
             current = current.getNext();
         }
         return current;
     }
+
+    
     
 }
 
