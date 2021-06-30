@@ -37,7 +37,7 @@ public class Test{
         System.out.println(ls2.addBefore(101, 20));
         System.out.println(ls2.remove(19));
         System.out.println(ls2.remove(0));
-        System.out.println(ls2.remove(7));
+        System.out.println(ls2.remove(23));
         System.out.println(ls2.toString());
     }
 }
