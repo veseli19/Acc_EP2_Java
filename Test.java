@@ -33,6 +33,8 @@ public class Test{
         System.out.println(ls2.addAfter(19, 9));    //false
         System.out.println(ls2.addAfter(19, 8));    //true
         System.out.println(ls2.addAfter(0, 5));
+        System.out.println(ls2.addBefore(101, 5));
+        System.out.println(ls2.addBefore(101, 20));
         System.out.println(ls2.toString());
 
     }

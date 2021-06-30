@@ -33,7 +33,7 @@ public class LinkedList {
         SLNode newNode = new SLNode(data, null);
         
         SLNode current = head;
-        int counter = 0;
+        int counter = 0; 
 
         if(head == null || i > size() - 1 || i < 0){
             return false;
@@ -52,6 +52,41 @@ public class LinkedList {
         return true;
 
     }
+
+    //Add before specified index
+    public boolean addBefore(int data, int i){
+
+        SLNode newNode = new SLNode(data, null);
+
+        if(head == null || i < 0 || i > size() - 1){
+            return false;
+        } 
+
+        if(size() == 1 && i == 1){
+            newNode.setNext(head);
+            head = newNode;
+            return true;
+        }
+
+        int count = 0;
+        SLNode current = head;
+        SLNode help = head;
+
+        while(i < size()){
+            
+            if(i == count && current != null){
+                newNode.setNext(current);
+                help.setNext(newNode);
+                return true;
+            }
+            help = current;
+            current = current.getNext();
+           
+            count++;
+        }
+        return false;
+
+    } 
 
     //returns data with index i
     public int get(int i){
